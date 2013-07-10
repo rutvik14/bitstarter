@@ -1,9 +1,9 @@
->0;271;0cvar express = require('express');
+B>0;271;0cvar express = require('express');
 
 var app = express.createServer(express.logger());
 
 var fs=require('fs');
-var data=fs.readFileSync('index.html','ascii');
+var data=fs.readFileSync('index.html','utf-8');
 
 app.get('/', function(request, response) {
   response.send(console.log(data));
